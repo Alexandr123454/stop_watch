@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #A9A9A9;
+  grid-template-columns: 1200px;
+}
+
+.logo {
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+}
+
+.circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #696969;
+  z-index: 10;
+}
+
+.clock__hours {
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  height: 20px;
+  width: 150px;
+  background-color: #E6E6FA;
+  border-radius: 25px;
+  animation-name: clock__hours;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: left;
+  z-index: 9;
+  opacity: 0.9;
+}
+
+.clock__minutues {
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  height: 20px;
+  border-radius: 25px;
+  width: 220px;
+  background-color: #BDB76B;
+  animation-name: clock__minutues;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: left;
+  z-index: 8;
+  opacity: 0.9;
+}
+
+.clock__seconds {
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  height: 20px;
+  border-radius: 25px;
+  width: 300px;
+  background-color: #DCDCDC;
+  animation-name: clock__seconds;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: left;
+  opacity: 0.9;
+}
+
+@keyframes clock__seconds {
+    0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes clock__minutues {
+    0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes clock__hours {
+    0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@media (max-width:899px) {
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .clock__hours {
+    height: 15px;
+    width: 80px;
+  }
+
+  .clock__minutues {
+    height: 15px;
+    width: 150px;
+  }
+
+  .clock__seconds {
+    height: 15px;
+    width: 230px;
+  }
+}
+
+
+@media (max-width:599px) {
+
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .clock__hours {
+    height: 10px;
+    width: 50px;
+  }
+
+  .clock__minutues {
+    height: 10px;
+    width: 120px;
+  }
+
+  .clock__seconds {
+    height: 10px;
+    width: 200px;
+  }
+}
